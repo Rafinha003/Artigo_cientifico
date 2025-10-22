@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projeto Seletividade Alimentar</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    /* ======== RESET ======== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(-45deg, #6fb1fc, #4364f7, #3651d4, #6fb1fc);
+      background-size: 400% 400%;
+      animation: gradientBG 10s ease infinite;
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    @keyframes gradientBG {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
+    header {
+      text-align: center;
+      padding: 120px 20px 80px;
+      z-index: 2;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    }
+
+    header p {
+      margin-top: 15px;
+      font-size: 1.2rem;
+      max-width: 650px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.7;
+      color: #f0f4ff;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 40px;
+      background: white;
+      color: #3651d4;
+      padding: 14px 32px;
+      border-radius: 50px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: 0.3s;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+
+    .btn:hover {
+      background: #3651d4;
+      color: white;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+      transform: translateY(-3px);
+    }
+
+    main {
+      background: white;
+      color: #333;
+      flex: 1;
+      border-top-left-radius: 40px;
+      border-top-right-radius: 40px;
+      padding: 60px 20px 80px;
+      text-align: center;
+      box-shadow: 0 -5px 20px rgba(0,0,0,0.1);
+    }
+
+    main h2 {
+      color: #3651d4;
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    main p {
+      max-width: 800px;
+      margin: 0 auto 40px;
+      font-size: 1rem;
+      color: #444;
+      line-height: 1.7;
+    }
+
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      padding: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: #eef5ff;
+      border-radius: 15px;
+      height: 220px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      color: #3651d4;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    footer {
+      background: #3651d4;
+      color: white;
+      text-align: center;
+      padding: 25px 0;
+      width: 100%;
+      border-top: 4px solid #1c2ca0;
+      margin-top: auto;
+    }
+
+    footer p {
+      font-size: 0.9rem;
+      opacity: 0.9;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Seletividade Alimentar em Crianças com TEA</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet facilisis felis. Vivamus dictum ligula sed erat imperdiet, vel cursus justo viverra.</p>
+    <a href="materialEducacional.html" class="btn">Acessar Material Educacional</a>
+  </header>
+
+  <main>
+    <h2>Apresentação</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer at dignissim neque. Suspendisse potenti. Curabitur tristique lorem vel convallis porta. Donec ut dignissim justo. Vestibulum a viverra sem. Sed ut eros nec lorem vulputate porta sit amet nec massa.</p>
+
+    <div class="card-container">
+      <div class="card">Espaço para Imagem 1</div>
+      <div class="card">Espaço para Imagem 2</div>
+      <div class="card">Espaço para Imagem 3</div>
+      <div class="card">Espaço para Imagem 4</div>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 Projeto UNAERP — Seletividade Alimentar em Crianças com TEA</p>
+  </footer>
+
+</body>
+</html>

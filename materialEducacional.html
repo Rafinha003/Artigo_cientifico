@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seletividade Alimentar em Crianças com TEA</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="style.css"> 
+  <style>
+    /* botão voltar */
+    #voltarBtn {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      background-color: #3651d4;
+      color: white;
+      border: none;
+      border-radius: 50px;
+      padding: 12px 24px;
+      font-size: 1rem;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      transition: 0.3s;
+      z-index: 1000;
+    }
+
+    #voltarBtn:hover {
+      background-color: #2b3fb0;
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Seletividade Alimentar em Crianças com TEA</h1>
+    <p>Compreendendo causas, impactos e estratégias</p>
+  </header>
+
+  <nav>
+    <a href="#faixa-etaria">Faixa Etária</a>
+    <a href="#motivos">Motivos</a>
+    <a href="#rejeitados">Alimentos Rejeitados</a>
+    <a href="#aceitos">Alimentos Aceitos</a>
+    <a href="#sensoriais">Aspectos Sensoriais</a>
+    <a href="#impactos">Impactos</a>
+    <a href="#estrategias">Estratégias</a>
+    <a href="#comparacao">TEA x Neurotípicos</a>
+    <a href="#familia">Família e Escola</a>
+    <a href="#mitos">Mitos e Verdades</a>
+    <a href="#grafico">Gráfico</a>
+    <a href="#prevalencia">Prevalência</a>
+  </nav>
+
+  <main>
+    <!-- Faixa etária -->
+    <section id="faixa-etaria">
+      <h2>Faixa Etária da Seletividade</h2>
+      <p>
+        A seletividade alimentar em crianças com TEA geralmente surge entre <strong>2 e 6 anos</strong>, embora possa persistir até a adolescência e vida adulta
+      </p>
+      <ul>
+        <li>Mais intensa entre <strong>3 e 5 anos</strong>;</li>
+        <li>Maior neofobia alimentar nessa fase;</li>
+        <li>O ambiente escolar/familiar exige maior diversidade alimentar.</li>
+      </ul>
+    </section>
+
+    <!-- Motivos -->
+    <section id="motivos">
+      <h2>Por que acontece nessa idade?</h2>
+      <div class="card-grid">
+        <div class="card"><h3>Rigidez comportamental</h3><p>Preferências fixas e resistência a novidades alimentares.</p></div>
+        <div class="card"><h3>Questões sensoriais</h3><p>Reações a texturas, cheiros e cores mais intensas.</p></div>
+        <div class="card"><h3>Formação do hábito alimentar</h3><p>Construção de padrões alimentares.</p></div>
+        <div class="card"><h3>Neofobia</h3><p>Medo natural de alimentos novos, acentuado no TEA.</p></div>
+      </div>
+    </section>
+
+    <!-- Alimentos rejeitados -->
+    <section id="rejeitados">
+      <h2>Alimentos mais Rejeitados</h2>
+      <ul>
+        <li>Carnes e peixes – ≈ 80,7%;</li>
+        <li>Frutas – ≈ 73,0%;</li>
+        <li>Legumes – ≈ 70,0%;</li>
+        <li>Leite desnatado – ≈ 51%;</li>
+        <li>Vegetais - Comumente rejeitados;</li>
+      </ul>
+    </section>
+
+    <!-- Alimentos aceitos -->
+    <section id="aceitos">
+      <h2>Alimentos mais Aceitos</h2>
+      <ul>
+        <li>Frango (≈ 94,9%);</li>
+        <li>Peixe frito (92,3%);</li>
+        <li>Hambúrguer e salsichas (≈ 89,8%);</li>
+        <li>Carne bovina (87,9%);</li>
+        <li>Nuggets de frango (87,2%);</li>
+        <li>Cordeiro (86,6%);</li>
+        <li>Carne de porco (76,3%);</li>
+        <li>Presunto (71%);</li>
+        <li>Bacon (65,8%);</li>
+        <li>Conservas de atum (63,2%) e peixe branco (63,2%);</li>
+        <li>Leite integral e iogurte – elevada aceitação.</li>
+      </ul>
+    </section>
+
+
+       <!-- Gráfico -->
+<section id="grafico">
+  <h2>Gráfico de Rejeição/Aceitação</h2>
+  <canvas id="foodChart"></canvas>
+  <script>
+    const ctx = document.getElementById('foodChart').getContext('2d');
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: [
+          'Carnes/Peixes', 'Frutas', 'Legumes', 'Leite desnatado',
+          'Frango', 'Peixe frito', 'Hambúrguer e salsichas',
+          'Carne bovina', 'Nuggets de frango', 'Cordeiro',
+          'Carne de porco', 'Presunto', 'Bacon',
+          'Conservas de atum', 'Peixe branco',
+          'Leite integral', 'Iogurte'
+        ],
+        datasets: [
+          {
+            label: 'Rejeição (%)',
+            data: [80.7, 73, 70, 51, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            backgroundColor: 'rgba(255, 99, 132, 0.6)'
+          },
+          {
+            label: 'Aceitação (%)',
+            data: [0, 0, 0, 0, 94.9, 92.3, 89.8, 87.9, 87.2, 86.6, 76.3, 71, 65.8, 63.2, 63.2, 90, 90],
+            backgroundColor: 'rgba(75, 192, 192, 0.6)'
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        scales: {
+          y: {
+            beginAtZero: true,
+            max: 100,
+            title: { display: true, text: 'Percentual (%)' }
+          },
+          x: {
+            ticks: { autoSkip: false, maxRotation: 45, minRotation: 45 }
+          }
+        },
+        plugins: {
+          legend: { position: 'top' },
+          title: {
+            display: true,
+            text: 'Comparativo de Rejeição e Aceitação Alimentar (Adams et al., 2021)'
+          }
+        }
+      }
+    });
+  </script>
+</section>
+    
+
+    <!-- Sensoriais -->
+    <section id="sensoriais">
+      <h2>Aspectos Sensoriais</h2>
+      <ul>
+        <li>Texturas inconsistentes ou sólidas;</li>
+        <li>Apresentação e posição dos alimentos no prato;</li>
+        <li>Preferência por talheres e recipientes específicos;</li>
+        <li>Exigências ritualísticas na alimentação.</li>
+      </ul>
+    </section>
+
+
+    <!-- Estratégias -->
+    <section id="estrategias">
+      <h2>Estratégias Práticas</h2>
+      <ul>
+        <li>Introdução gradual de novos alimentos;</li>
+        <li>Exposição repetida sem pressão excessiva;</li>
+        <li>Reforços positivos;</li>
+        <li>Transformar alimentos rejeitados em preparações aceitas;</li>
+        <li>Participação da criança no preparo;</li>
+        <li>Equipe multidisciplinar (nutricionista, psicólogo).</li>
+      </ul>
+    </section>
+
+    <!-- Comparação -->
+    <section id="comparacao">
+      <h2>TEA x Crianças Neurotípicas</h2>
+      <table>
+        <thead>
+          <tr><th>Aspecto</th><th>Crianças com TEA</th><th>Neurotípicas</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Rejeição de frutas</td><td>≈ 73%</td><td>≈ 27%</td></tr>
+          <tr><td>Rejeição de vegetais</td><td>≈ 70%</td><td>≈ 25%</td></tr>
+          <tr><td>Neofobia alimentar</td><td>Alta</td><td>Média/Baixa</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Família -->
+    <section id="familia">
+      <h2>O Papel da Família e da Escola</h2>
+      <p>
+        Pais, cuidadores e professores desempenham papel essencial:
+      </p>
+      <ul>
+        <li>Evitar pressão excessiva durante refeições;</li>
+        <li>Dar exemplo positivo consumindo alimentos variados;</li>
+        <li>Manter rotinas consistentes;</li>
+        <li>Colaborar com nutricionistas e terapeutas.</li>
+      </ul>
+    </section>
+
+
+
+  <footer>
+    <p>Artigo cientifico unaerp.</p>
+  </footer>
+
+  <button id="topBtn" onclick="window.scrollTo({top:0, behavior:'smooth'})">↑</button>
+  <button id="voltarBtn" onclick="window.location.href='index.html'">← Voltar</button>
+</body>
+</html>
