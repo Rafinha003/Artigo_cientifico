@@ -148,3 +148,76 @@ footer {
 #topBtn:hover {
   background: #2b3fb0;
 }
+
+/* Accordion Container */
+#receitas {
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  margin-bottom: 40px;
+}
+
+/* Accordion Buttons */
+.accordion-button {
+  background: #4a63f6;  /* tom de azul mais moderno */
+  color: #fff;
+  cursor: pointer;
+  padding: 16px 24px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: background 0.3s, transform 0.2s;
+  border-radius: 10px;
+  margin-top: 12px;
+  font-weight: 600;
+  font-size: 1rem;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+.accordion-button:hover {
+  background: #3c4ed6;
+  transform: translateY(-2px);
+}
+
+.accordion-button.active {
+  background: #3c4ed6;
+}
+
+/* Accordion Content */
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  background-color: #f4f6ff;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  line-height: 1.6;
+  font-size: 0.95rem;
+  color: #333;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  padding: 0 24px; /* padding inicial zero */
+}
+
+.accordion-content.open {
+  padding: 20px 24px; /* padding quando aberto */
+  max-height: 2000px; /* ou um valor grande suficiente para o conteúdo */
+}
+
+
+.accordion-content h3 {
+  color: #4a63f6;
+  margin-top: 15px;
+}
+
+.accordion-content ul {
+  margin: 10px 0 10px 20px;
+}
+
+.accordion-content p {
+  margin: 8px 0;
+}
+
+.accordion-content ul {
+  margin: 10px 0 10px 20px;
+}
