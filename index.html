@@ -6,159 +6,233 @@
   <title>Projeto Seletividade Alimentar</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
-    /* ======== RESET ======== */
+
     * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
-    }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
 
-    body {
-      background: linear-gradient(-45deg, #6fb1fc, #4364f7, #3651d4, #6fb1fc);
-      background-size: 400% 400%;
-      animation: gradientBG 10s ease infinite;
-      color: white;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
+body {
+  background: linear-gradient(-45deg, #6fb1fc, #4364f7, #3651d4, #6fb1fc);
+  background-size: 400% 400%;
+  animation: gradientBG 10s ease infinite;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
 
-    @keyframes gradientBG {
-      0% {background-position: 0% 50%;}
-      50% {background-position: 100% 50%;}
-      100% {background-position: 0% 50%;}
-    }
+@keyframes gradientBG {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
 
-    header {
-      text-align: center;
-      padding: 120px 20px 80px;
-      z-index: 2;
-    }
+/* ---------- HEADER ---------- */
+header {
+  text-align: center;
+  padding: 80px 20px 60px;
+  max-width: 900px;
+  margin: 0 auto;
+}
 
-    header h1 {
-      font-size: 3rem;
-      font-weight: 700;
-      letter-spacing: 1px;
-      text-shadow: 0 4px 20px rgba(0,0,0,0.3);
-    }
+header h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.2;
+  text-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
 
-    header p {
-      margin-top: 15px;
-      font-size: 1.2rem;
-      max-width: 650px;
-      margin-left: auto;
-      margin-right: auto;
-      line-height: 1.7;
-      color: #f0f4ff;
-    }
+header p {
+  margin-top: 20px;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #f0f4ff;
+  max-width: 750px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: justify;
+}
 
-    .btn {
-      display: inline-block;
-      margin-top: 40px;
-      background: white;
-      color: #3651d4;
-      padding: 14px 32px;
-      border-radius: 50px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: 0.3s;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-    }
+.btn {
+  display: inline-block;
+  margin-top: 35px;
+  background: white;
+  color: #3651d4;
+  padding: 14px 32px;
+  border-radius: 40px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
 
-    .btn:hover {
-      background: #3651d4;
-      color: white;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.3);
-      transform: translateY(-3px);
-    }
+.btn:hover {
+  background: #3651d4;
+  color: white;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  transform: translateY(-3px);
+}
 
-    main {
-      background: white;
-      color: #333;
-      flex: 1;
-      border-top-left-radius: 40px;
-      border-top-right-radius: 40px;
-      padding: 60px 20px 80px;
-      text-align: center;
-      box-shadow: 0 -5px 20px rgba(0,0,0,0.1);
-    }
 
-    main h2 {
-      color: #3651d4;
-      font-size: 2rem;
-      margin-bottom: 20px;
-    }
+main {
+  background: white;
+  color: #333;
+  flex: 1;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  padding: 50px 25px 70px;
+  text-align: center;
+  box-shadow: 0 -5px 20px rgba(0,0,0,0.1);
+}
 
-    main p {
-      max-width: 800px;
-      margin: 0 auto 40px;
-      font-size: 1rem;
-      color: #444;
-      line-height: 1.7;
-    }
+main h2 {
+  color: #3651d4;
+  font-size: 1.9rem;
+  margin-bottom: 20px;
+}
 
-    .card-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 25px;
-      padding: 20px;
-      max-width: 1000px;
-      margin: 0 auto;
-    }
+main p {
+  max-width: 850px;
+  margin: 0 auto 40px;
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.7;
+  text-align: justify;
+}
 
-    .card {
-      background: #eef5ff;
-      border-radius: 15px;
-      height: 220px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.1rem;
-      color: #3651d4;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-      transition: 0.3s;
-    }
 
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-    }
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+  padding: 10px;
+  max-width: 900px;
+  margin: 0 auto;
+}
 
-    footer {
-      background: #3651d4;
-      color: white;
-      text-align: center;
-      padding: 25px 0;
-      width: 100%;
-      border-top: 4px solid #1c2ca0;
-      margin-top: auto;
-    }
+.card {
+  background: #eef5ff;
+  border-radius: 15px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: #3651d4;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
 
-    footer p {
-      font-size: 0.9rem;
-      opacity: 0.9;
-    }
-  </style>
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+
+footer {
+  background: #3651d4;
+  color: white;
+  text-align: center;
+  padding: 25px 0;
+  width: 100%;
+  border-top: 4px solid #1c2ca0;
+  margin-top: auto;
+}
+
+footer p {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.9rem;
+  }
+
+  header p,
+  main p {
+    font-size: 1rem;
+  }
+
+  .card {
+    height: 170px;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.6rem;
+  }
+
+  .btn {
+    padding: 12px 24px;
+    font-size: 0.9rem;
+  }
+}
+
+.container-triangulo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.linha-superior {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.linha-superior img,
+.linha-inferior img {
+  width: 200px;      
+  height: 200px;
+  object-fit: cover; 
+  border-radius: 12px; 
+}
+
+.linha-inferior img {
+  margin-top: -10px; 
+}
+
+
+     </style>
 </head>
 <body>
 
   <header>
     <h1>Seletividade Alimentar em Crianças com TEA</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet facilisis felis. Vivamus dictum ligula sed erat imperdiet, vel cursus justo viverra.</p>
+    <p>O Transtorno do Espectro Autista (TEA) é uma condição de neurodesenvolvimento caracterizada por dificuldades de interação social, comunicação e comportamentos repetitivos. Entre os diversos impactos desse transtorno, a seletividade alimentar aparece como um dos fatores mais marcantes, afetando diretamente a saúde, o crescimento e a socialização dessas crianças. Partimos do reconhecimento que a alimentação adequada é essencial para o desenvolvimento físico, cognitivo e emocional.  
+
+Em crianças com TEA, a recusa de determinados alimentos, a preferência por texturas específicas e a dificuldade em experimentar novidades podem gerar deficiências nutricionais e ampliar sintomas comportamentais.  
+
+Desta forma, esse contexto traz desgaste emocional para famílias e pode comprometer o convívio escolar e social. Diante desse cenário, torna-se urgente desenvolver estratégias que unam conhecimento educacional, nutricional e psicológico e, nesse sentido, propõe-se apresentar um objeto de aprendizagem para auxiliar pais e responsáveis na promoção da alimentação saudável para crianças com TEA.  
+
+Espera-se que esta ferramenta tecnológica sirva como recurso de apoio contínuo às famílias, cuidadores e profissionais oferecendo cardápios, dicas práticas e informações baseadas em evidências científicas.  </p>
     <a href="materialEducacional.html" class="btn">Acessar Material Educacional</a>
   </header>
 
   <main>
     <h2>Apresentação</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer at dignissim neque. Suspendisse potenti. Curabitur tristique lorem vel convallis porta. Donec ut dignissim justo. Vestibulum a viverra sem. Sed ut eros nec lorem vulputate porta sit amet nec massa.</p>
+    <p>Este website sobre Seletividade Alimentar em Crianças com TEA é resultado do projeto “SELETIVIDADE ALIMENTAR NA CRIANÇA COM TRANSTORNO DO ESPECTRO AUTISTA: estratégias educacionais e nutricionais relativas aos hábitos alimentares na perspectiva dos cuidadores” que foi tema da pesquisa da mestranda Janaina Araujo dos Santos de Faria, sob orientação da Profa. Dra. Silvia Sidnéia da Silva do Programa de Mestrado Profissional em Saúde e Educação da Universidade de Ribeirão Preto- UNAERP, em parceria com o discente Rafael Martins Nascimento, orientado pelo Prof. Dr. Edilson Carlos Caritá da Universidade de Ribeirão Preto que idealizaram, prototiparam e desenvolveram o website. </p>
 
-    <div class="card-container">
-      <div class="card">Espaço para Imagem 1</div>
-      <div class="card">Espaço para Imagem 2</div>
-      <div class="card">Espaço para Imagem 3</div>
-      <div class="card">Espaço para Imagem 4</div>
-    </div>
+ <div class="container-triangulo">
+  <div class="linha-superior">
+    <img src="Demonstracao.jpeg" alt="Foto 1">
+    <img src="Reuniao.jpeg" alt="Foto 2">
+  </div>
+
+  <div class="linha-inferior">
+    <img src="nuvensDePalavra.jpeg" alt="Foto 3">
+  </div>
+</div>
+
+
   </main>
 
   <footer>
