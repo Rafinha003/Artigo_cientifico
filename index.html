@@ -39,9 +39,18 @@ header {
 }
 
 header h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  text-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+.site-name {
+  margin-bottom: 12px;
   font-size: 2.4rem;
   font-weight: 700;
   line-height: 1.2;
+  text-align: center;
   text-shadow: 0 4px 20px rgba(0,0,0,0.3);
 }
 
@@ -150,7 +159,11 @@ footer p {
 
 @media (max-width: 768px) {
   header h1 {
-    font-size: 1.9rem;
+    font-size: 1.3rem;
+  }
+
+  .site-name {
+    font-size: 2rem;
   }
 
   header p,
@@ -165,7 +178,11 @@ footer p {
 
 @media (max-width: 480px) {
   header h1 {
-    font-size: 1.6rem;
+    font-size: 1.1rem;
+  }
+
+  .site-name {
+    font-size: 1.8rem;
   }
 
   .btn {
@@ -206,6 +223,7 @@ footer p {
 <body>
 
   <header>
+    <div class="site-name">TEAlimenta</div>
     <h1>Seletividade Alimentar em Crianças com TEA</h1>
     <p>O Transtorno do Espectro Autista (TEA) é uma condição de neurodesenvolvimento caracterizada por dificuldades de interação social, comunicação e comportamentos repetitivos. Entre os diversos impactos desse transtorno, a seletividade alimentar aparece como um dos fatores mais marcantes, afetando diretamente a saúde, o crescimento e a socialização dessas crianças. Partimos do reconhecimento que a alimentação adequada é essencial para o desenvolvimento físico, cognitivo e emocional.  
 
